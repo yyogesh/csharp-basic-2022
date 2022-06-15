@@ -75,3 +75,22 @@ var message1 = 123;
 
 // var msg; // Implicitly-typed variables must be initialized before use
 
+
+Console.WriteLine("**************** Assginement ******************");
+string name = "Bob";
+int messages = 3;
+decimal temperature = 34.4m;
+
+Console.Write("Hello, ");
+Console.Write(name);
+Console.Write("! You have ");
+Console.Write(messages);
+Console.Write(" messages in your inbox. The temperature is ");
+Console.Write(temperature);
+Console.Write(" celsius.");
+
+
+Console.WriteLine("**************** Assginement End ******************");
+
+Console.WriteLine("Hello\nWorld!"); // new line
+Console.WriteLine("Hello\tWorld!"); // 8 space keyword
