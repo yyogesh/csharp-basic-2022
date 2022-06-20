@@ -352,3 +352,143 @@ if (msg.Contains("fox"))
     Console.WriteLine("What does the fox say?");
 }
 
+
+if (total >= 15)
+{
+    Console.WriteLine("You win!");
+}
+else
+{
+    Console.WriteLine("Sorry, you lose.");
+}
+
+
+
+int roll11 = 6;
+int roll12 = 1;
+int roll13 = 2;
+
+int total10 = roll11 + roll12 + roll13;
+
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total10}");
+
+
+// && and
+// T  T ==> T
+// T F ==> F
+// F T ==> F
+// F F ==> F
+
+
+// || or
+// T T ==> T
+// T F ==> T
+// F T ==> T
+// F F ==> F
+
+// 6 2 6
+// 4 4 4
+if ((roll11 == roll12) || (roll12 == roll13) || (roll11 == roll13)) // any one of them is tru thn in will go inside in if condition
+{
+    if ((roll11 == roll12) && (roll12 == roll13)) // 6 6 6 (6 == 2) && (2 == 6)
+    {
+        Console.WriteLine("You rolled triples!  +6 bonus to total!");
+        total10 += 6;
+    }
+    else // 6 6
+    {
+        Console.WriteLine("You rolled doubles!  +2 bonus to total!");
+        total10 += 2;
+    }
+}
+// 16
+// 18
+if (total10 >= 15)
+{
+    Console.WriteLine("You win!");
+}
+else
+{
+    Console.WriteLine("Sorry, you lose.");
+}
+
+
+// + - *  / % && ||
+
+
+
+Random dice10 = new Random();
+
+int roll21 = dice10.Next(1, 7);
+int roll22 = dice10.Next(1, 7);
+int roll23 = dice10.Next(1, 7);
+
+int total20 = roll21 + roll22 + roll23;
+
+
+Console.WriteLine($"Dice roll: {roll21} + {roll22} + {roll23} = {total20}");
+
+
+if ((roll21 == roll22) || (roll22 == roll23) || (roll21 == roll23))
+{
+    if ((roll21 == roll22) && (roll22 == roll23))
+    {
+        Console.WriteLine("You rolled triples!  +6 bonus to total!");
+        total20 += 6;
+    }
+    else
+    {
+        Console.WriteLine("You rolled doubles!  +2 bonus to total!");
+        total20 += 2;
+    }
+}
+
+if (total >= 16)
+{
+    Console.WriteLine("You win a new car!");
+}
+else if (total >= 10)
+{
+    Console.WriteLine("You win a new laptop!");
+}
+else if (total == 7)
+{
+    Console.WriteLine("You win a trip for two!");
+}
+else
+{
+    Console.WriteLine("You win a kitten!");
+}
+
+
+
+
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
+
+if (daysUntilExpiration == 0)
+{
+    Console.WriteLine("Your subscription has expired.");
+}
+else if (daysUntilExpiration == 1)
+{
+    Console.WriteLine("Your subscription expires within a day!");
+    discountPercentage = 20;
+}
+else if (daysUntilExpiration <= 5)
+{
+    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
+    discountPercentage = 10;
+}
+else if (daysUntilExpiration <= 10)
+{
+    Console.WriteLine("Your subscription will expire soon. Renew now!");
+}
+
+if (discountPercentage > 0)
+{
+    Console.WriteLine($"Renew now and save {discountPercentage}%.");
+}
+
+
